@@ -68,7 +68,7 @@ def pregunta_01():
 
     # Remueva la columna `veil-type` del DataFrame `df`.
     # Esta columna tiene un valor constante y no sirve para la detección de hongos.
-    df.drop(columns=["veil-type"], inplace=True)
+    df.drop(columns=["veil_type"], inplace=True)
 
     # Asigne la columna `type` a la variable `y`.
     y = df["type"]
@@ -97,7 +97,7 @@ def pregunta_02():
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 123. Use 50 patrones para la muestra de prueba.
     (X_train, X_test, y_train, y_test,) = train_test_split(
-        X, y, test_size=0.5, random_state=123
+        X, y, test_size=50, random_state=123
     )
 
     # Retorne `X_train`, `X_test`, `y_train` y `y_test`
